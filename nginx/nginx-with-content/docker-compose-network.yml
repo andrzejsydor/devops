@@ -1,0 +1,27 @@
+version: '3'
+services:
+  web1:
+    container_name: ng-net1 
+    build:
+      context: .
+      dockerfile: ng1
+    ports: 
+      - "80:80"
+  web2:
+    container_name: ng-net2
+    build:
+      context: .
+      dockerfile: ng2
+    ports:
+      - "81:80"
+    networks:
+      - net1
+  curl:
+    container_name: nginx-curl-cont
+    image: nginx-curl
+    ports:
+      - "9009:9009"
+    networks:
+      - net1
+networks:
+  net1:
