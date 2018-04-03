@@ -2,16 +2,12 @@ version: '3'
 services:
   web1:
     container_name: ng-net1 
-    build:
-      context: .
-      dockerfile: ng1
+    image: nginx:alpine
     ports: 
       - "80:80"
   web2:
     container_name: ng-net2
-    build:
-      context: .
-      dockerfile: ng2
+    image: nginx:alpine
     ports:
       - "81:80"
     networks:
