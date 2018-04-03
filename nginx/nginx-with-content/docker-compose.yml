@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web1:
+    container_name: ng1 
+    build:
+      context: ./
+      dockerfile: ng1
+    ports: 
+      - "80:80"
+  web2:
+    container_name: ng2
+    build:
+      context: ./
+      dockerfile: ng2
+    ports:
+      - "81:80"

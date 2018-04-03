@@ -3,5 +3,5 @@ services:
   web:
     container_name: ngalp
     image: nginx:alpine
-    ports:
+    ports: 
       - "80:80"
