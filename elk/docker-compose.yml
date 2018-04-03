@@ -1,0 +1,48 @@
+version: "3.3"
+
+services:
+
+# logging
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3
+    container_name: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    networks: 
+      - elk
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana-oss:6.2.3
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    networks: 
+      - elk
+    depends_on:
+      - elasticsearch
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash-oss:6.2.3
+    container_name: logstash
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    ports:
+      - "5000:5000"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+networks:
+  elk:
+ 
