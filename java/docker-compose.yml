@@ -1,0 +1,6 @@
+version: '2'
+services:
+  my_java:
+    container_name: my_java
+    build:
+      context: ./
