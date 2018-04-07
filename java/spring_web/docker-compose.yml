@@ -1,0 +1,7 @@
+version: '2'
+services:
+  web:
+    container_name: spring_web_compose
+    build: .
+    ports: 
+      - "8080:8080"
