@@ -11,11 +11,11 @@ docker run --name my-redis -d redis
 
 # winpty for windows
 
-``` sh
+```sh
 winpty docker exec -it my-redis bash
 ```
 
-``` sh
+```sh
 redis-cli monitor
 
 redis-cli --latency
