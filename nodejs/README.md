@@ -1,5 +1,3 @@
+`docker build -t hello-express .`
 
-docker build -t hello-express .
-
-docker run -d -p 8081:8081 --name hello-express-app hello-express
-
+`docker run -d --rm -p 3000:3000 --name hello-express-app hello-express`
