@@ -1,0 +1,61 @@
+version: '3'
+services:
+  discovery:
+    container_name: discovery-container
+    image: dockerworkshopsydor/microservices-architecture-service_discovery
+    ports:
+      - "8761:8761"
+    networks:
+      - net1
+  gateway:
+    container_name: gateway-container
+    image: dockerworkshopsydor/microservices-architecture-gateway
+    networks:
+      - net1
+    depends_on:
+      - discovery
+  service1:
+    container_name: service1-container 
+    image: dockerworkshopsydor/microservices-architecture-service
+    ports: 
+      - "8080:8080"
+    networks:
+      - net1
+    stdin_open: true
+    tty: true
+    depends_on:
+      - discovery
+  service2:
+    container_name: service2-container 
+    image: dockerworkshopsydor/microservices-architecture-service
+    ports: 
+      - "8081:8080"
+    networks:
+      - net1
+    depends_on:
+      - discovery
+  service3:
+    container_name: service3-container 
+    image: dockerworkshopsydor/microservices-architecture-service
+    ports: 
+      - "8080"
+    networks:
+      - net1
+    depends_on:
+      - discovery
+  client1:
+    container_name: client1-container 
+    image: dockerworkshopsydor/microservices-architecture-client
+    networks:
+      - net1
+    depends_on:
+      - discovery
+  client2:
+    container_name: client2-container 
+    image: dockerworkshopsydor/microservices-architecture-client
+    networks:
+      - net1
+    depends_on:
+      - discovery
+networks:
+  net1:
