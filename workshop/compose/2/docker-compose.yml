@@ -1,0 +1,27 @@
+version: '3'
+services:
+  web1:
+    container_name: ng-cont 
+    image: nginx:alpine
+    ports: 
+      - "80:80"
+  web2:
+    container_name: ng-cont-net1
+    image: nginx:alpine
+    ports:
+      - "81:80"
+    networks:
+      - net1
+  curl:
+    container_name: curl-cont
+    build:
+      context: ./
+      dockerfile: Dockerfile.curl
+    stdin_open: true
+    tty: true
+    ports:
+      - "9009:9009"
+    networks:
+      - net1
+networks:
+  net1:
