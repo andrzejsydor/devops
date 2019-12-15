@@ -1,0 +1,47 @@
+version: '3'
+services:
+  rabbitmq-host:
+    image: "rabbitmq:3-management"
+    hostname: "rabbitmq-host"
+    ports:
+      - "15672:15672"
+      - "5671:5671"
+      - "5672:5672"
+    environment:
+      - "RABBITMQ_DEFAULT_PASS=rabbitmq"
+      - "RABBITMQ_DEFAULT_USER=rabbitmq"
+    networks:
+      - net1
+  sender1:
+    container_name: queuesender1-container
+    image: dockerworkshopsydor/microservices-architecture-queuesender
+    networks:
+      - net1
+    environment:
+      - "MESSAGE=test1"
+      - "FIXED_DELAY=500"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - rabbitmq-host
+  sender2:
+    container_name: queuesender2-container
+    image: dockerworkshopsydor/microservices-architecture-queuesender
+    networks:
+      - net1
+    environment:
+      - "MESSAGE=test2"
+      - "FIXED_DELAY=1200"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - rabbitmq-host
+  receiver:
+    container_name: queueclient-container 
+    image: dockerworkshopsydor/microservices-architecture-queueclient
+    networks:
+      - net1
+    depends_on:
+      - rabbitmq-host
+networks:
+  net1:
