@@ -16,6 +16,30 @@
 
 ##### --ulimit: ulimit options
 
+### Building an image from a zip file:
+
+`docker image build -t <NAME>:<TAG> - < <FILE>tar.gz`
+
+
+
+# Tagging
+
+##### -t, --tag add a name and an optional tag in the `name:tag` format:
+
+` docker image build -t <name>:<tag>`
+
+` docker image build --tag <name>:<tag>`
+
+### Use the commit hash GIT as the image tag:
+
+`git log -1 --pretty=%H`
+
+### Use `docker image tag` to a create a new tagged image:
+
+`docker image tag <SOURCE_IMAGE>:<TAG> <TARGET_IMAGE>:<TAG>`
+
+
+
 
 
 # Network
