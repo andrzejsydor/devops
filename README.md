@@ -1,3 +1,23 @@
+# BUILD
+
+### Building an image:
+
+`docker image build -t <NAME>:<TAG>`
+
+### Useful flags:
+
+##### -f, --file string: name of the Dockerfile
+
+##### --force-rm: always remove intermediate containers
+
+##### --label: sets metadata for an image
+
+##### --rm: removes intermediate containers after a successful build
+
+##### --ulimit: ulimit options
+
+
+
 # Network
 
 ## Networking Commands
