@@ -1,6 +1,8 @@
 # Creating Containers:
 
-`docker container run <IMAGE>`
+## Run a command in a new container:
+
+`docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]`
 
 ### Flags:
 
@@ -24,6 +26,37 @@
 Example:
 
 `docker container run --rm -dit -name myCont alpine`
+
+
+
+## Run a command in a running container:
+
+`docker exec [OPTIONS] CONTAINER COMMAND [ARG...]`
+
+[https://docs.docker.com/engine/reference/commandline/exec/](https://docs.docker.com/engine/reference/commandline/exec/)
+
+Example:
+
+`docker exec -it <CONTAINER> sh`
+
+
+
+# Logs:
+
+`docker logs [OPTIONS] CONTAINER`
+
+[https://docs.docker.com/engine/reference/commandline/logs/](https://docs.docker.com/engine/reference/commandline/logs/)
+
+| CMD                 | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `--follow , -f`     | Follow log output                                            |
+| `--since`           | Show logs since timestamp (e.g. 2013-01-02T13:23:37) or relative (e.g. 42m for 42 minutes) |
+| `--tail`            | Number of lines to show from the end of the logs             |
+| `--timestamps , -t` | Show timestamps                                              |
+
+Example:
+
+`docker logs -f --until=2s`
 
 
 
