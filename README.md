@@ -4,11 +4,28 @@
 
 ### Flags:
 
---help
+[https://docs.docker.com/engine/reference/commandline/container_run/](https://docs.docker.com/engine/reference/commandline/container_run/)
 
-| cmd  |                                                  |
-| ---- | ------------------------------------------------ |
-| --rm | Automatically remove the container when it exits |
+| cmd                |                                                    |
+| ------------------ | -------------------------------------------------- |
+| `--help`           |                                                    |
+| `--rm`             | Automatically remove the container when it exits   |
+| --detach , -d      | Run container in background and print container ID |
+| --interactive , -i | Keep STDIN open even if not attached               |
+| --tty , -t         | Allocate a pseudo-TTY                              |
+| --publish , -p     | Publish a container’s port(s) to the host          |
+| --publish-all , -P | Publish all exposed ports to random ports          |
+| --volume , -v      | Bind mount a volume                                |
+| `--name`           | Assign a name to the container                     |
+| `--mount`          | Attach a filesystem mount to the container         |
+| `--network`        | Connect a container to a network                   |
+| `--restart`        | Restart policy to apply when a container exits     |
+
+Example:
+
+`docker container run --rm -dit -name myCont alpine`
+
+
 
 # BUILD
 
