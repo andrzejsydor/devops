@@ -60,6 +60,21 @@ Example:
 
 
 
+# COMMIT
+
+`docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]`
+
+[https://docs.docker.com/engine/reference/commandline/commit/](https://docs.docker.com/engine/reference/commandline/commit/)
+
+| CMD              | Description                                                  |
+| ---------------- | ------------------------------------------------------------ |
+| `--author , -a`  | Author (e.g., “John Hannibal Smith [hannibal@a-team.com](mailto:hannibal@a-team.com)”) |
+| `--change , -c`  | Apply Dockerfile instruction to the created image            |
+| `--message , -m` | Commit message                                               |
+| `--pause , -p`   | Pause container during commit                                |
+
+`docker commit -c "ENV PROFILE prod" -m 'production profile' <CONTAINER_ID> <IMAGE_ID>`
+
 # BUILD
 
 ### Building an image:
