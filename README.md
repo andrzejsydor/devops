@@ -75,6 +75,16 @@ Example:
 
 `docker commit -c "ENV PROFILE prod" -m 'production profile' <CONTAINER_ID> <IMAGE_ID>`
 
+# TAG
+
+`docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`
+
+[https://docs.docker.com/engine/reference/commandline/tag/](https://docs.docker.com/engine/reference/commandline/tag/)
+
+Example:
+
+`docker tag image:latest image:2`
+
 # BUILD
 
 ### Building an image:
