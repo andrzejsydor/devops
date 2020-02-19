@@ -231,6 +231,22 @@ Example:
 
 
 
+# Image Cleanup
+
+### Get information about disk usage on a system
+
+`docker system df`
+
+`docker system df -v`
+
+### Remove dangling images (images not referenced by any tag or container)
+
+`docker image prune`
+
+### Remove all unused images (not useb by a container)
+
+`docker image prune -a`
+
 # Portainer
 
 `docker volume create portainer_data`
