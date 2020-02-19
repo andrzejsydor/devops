@@ -75,6 +75,34 @@ Example:
 
 `docker commit -c "ENV PROFILE prod" -m 'production profile' <CONTAINER_ID> <IMAGE_ID>`
 
+# MANAGING VOLUME
+
+### List all Docker volume commands
+
+`docker volume -h`
+
+### Create a volume
+
+`docker volume create <VOLUME_NAME>`
+
+### List current volumes
+
+`docker volume ls`
+
+### Get detailed about a volume
+
+`docker volume inspect <VOLUME_NAME>`
+
+### Delete a volume
+
+`docker volume rm <VOLUME_NAME>`
+
+### Removing all unused volumes
+
+`docker volume prune`
+
+
+
 # TAG
 
 `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`
