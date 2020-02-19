@@ -101,6 +101,28 @@ Example:
 
 `docker volume prune`
 
+# NETWROK
+
+`docker network COMMAND`
+
+[https://docs.docker.com/engine/reference/commandline/network/](https://docs.docker.com/engine/reference/commandline/network/)
+
+### List networks
+
+`docker network ls`
+
+### Inspect a network
+
+`docker network inspect <NETWORK>`
+
+### Disconnect a runninng container from an existing network
+
+`docker network disconnect <NETWORK-CONTAINER>`
+
+### Deleta a network
+
+`docker network rm <NETWORK>`
+
 
 
 # TAG
