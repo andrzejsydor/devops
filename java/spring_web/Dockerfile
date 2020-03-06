@@ -1,15 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <include resource="org/springframework/boot/logging/logback/base.xml"/>
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>/var/log/Application/application.log</file>
-        <append>true</append>
-        <encoder>
-            <pattern>%-7d{yyyy-MM-dd HH:mm:ss:SSS} %m%n</pattern>
-        </encoder>
-    </appender>
+FROM openjdk:11
 
-    <root level="INFO">
-        <appender-ref ref="FILE" />
-    </root>
-</configuration>
+ARG JAR_FILE=./spring_web/build/libs/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
