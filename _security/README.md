@@ -97,6 +97,45 @@ At its core, ZAP is what is known as a “man-in-the-middle proxy.” It stands 
 
 
 
+# Docker
+
+## Seccomp security profiles for Docker
+
+Secure computing mode (`seccomp`) is a Linux kernel feature. You can use it to restrict the actions available within the container. The `seccomp()` system call operates on the seccomp state of the calling process. You can use this feature to restrict your application’s access.
+
+
+
+```sh
+$ grep SECCOMP /boot/config-$(uname -r)
+CONFIG_HAVE_ARCH_SECCOMP_FILTER=y
+CONFIG_SECCOMP_FILTER=y
+CONFIG_SECCOMP=y
+```
+
+
+
+```sh
+$ docker container run -it --rm --security-opt seccomp=<profile>.json alpine sh ...
+```
+
+
+
+### seccomp profile default
+
+`-seccomp-profile=/etc/docker/seccomp.json`
+
+
+
+### Run without the default seccomp profile
+
+```sh
+docker run --rm -it --security-opt seccomp=unconfined alpine sh
+```
+
+## Links
+
+https://github.com/docker/labs/tree/master/security/seccomp
+
 
 
 # Other
