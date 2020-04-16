@@ -205,6 +205,19 @@ docker volume COMMAND COMMAND
 
 https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v---read-only
 
+```dockerfile
+docker container run -v <SOURCE>:<TARGET> <IMAGE>
+```
+
+
+## Add bind mounts or volumes
+
+https://docs.docker.com/engine/reference/commandline/run/#add-bind-mounts-or-volumes-using-the---mount-flag
+
+```dockerfile
+docker container run --mount type=bind,source=<SOURCE>,target=<TARGET> <IMAGE>
+```
+
 
 
 ## Example
