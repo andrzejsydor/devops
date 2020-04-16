@@ -27,11 +27,23 @@
 | `--network`          | Connect a container to a network                   |
 | `--restart`          | Restart policy to apply when a container exits     |
 
-Example:
-
-`docker container run --rm -dit -name myCont alpine`
 
 
+## Environment variables
+
+Use the `-e`, `--env`, and `--env-file` flags to set simple (non-array) environment variables in the container you’re running, or overwrite variables that are defined in the Dockerfile of the image you’re running.
+
+https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file#set-environment-variables--e---env---env-file
+
+## Example:
+
+```
+docker container run --rm -dit -name myCont alpine
+```
+
+```
+docker run -e MYVAR1 --env MYVAR2=foo --env-file ./env.list
+```
 
 # Container Commands
 
