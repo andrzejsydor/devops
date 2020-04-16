@@ -124,7 +124,11 @@ Example:
 
 `docker image inspect alpine`
 
-# Logs:
+
+
+# Logs
+
+Fetch the logs of a container
 
 `docker logs [OPTIONS] CONTAINER`
 
@@ -145,6 +149,8 @@ Example:
 
 # COMMIT
 
+Create a new image from a container’s changes
+
 `docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]`
 
 [https://docs.docker.com/engine/reference/commandline/commit/](https://docs.docker.com/engine/reference/commandline/commit/)
@@ -155,6 +161,8 @@ Example:
 | `--change , -c`  | Apply Dockerfile instruction to the created image            |
 | `--message , -m` | Commit message                                               |
 | `--pause , -p`   | Pause container during commit                                |
+
+Example:
 
 `docker commit -c "ENV PROFILE prod" -m 'production profile' <CONTAINER_ID> <IMAGE_ID>`
 
@@ -299,6 +307,30 @@ Example:
 ### Assigning an IP to a container:
 
 `docker container run -name <NAME> -it --network <NETWORK> --ip <IP> <IMAGE> <CMD>`
+
+
+
+# Docker Hub
+
+## docker login
+
+Log in to a Docker registry
+
+https://docs.docker.com/engine/reference/commandline/login/
+
+```none
+docker login [OPTIONS] [SERVER]
+```
+
+## docker logout
+
+Log out from a Docker registry
+
+https://docs.docker.com/engine/reference/commandline/logout/
+
+```none
+docker logout [SERVER]
+```
 
 
 
