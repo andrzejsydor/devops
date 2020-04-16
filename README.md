@@ -180,29 +180,41 @@ Example:
 
 # MANAGING VOLUME
 
-### List all Docker volume commands
+https://docs.docker.com/storage/volumes/
 
-`docker volume -h`
+## docker volume
 
-### Create a volume
+Manage volumes
 
-`docker volume create <VOLUME_NAME>`
+https://docs.docker.com/engine/reference/commandline/volume/
 
-### List current volumes
+```dockerfile
+docker volume COMMAND COMMAND
+```
 
-`docker volume ls`
+| cmd       |                                 |
+| --------- | ------------------------------- |
+| `-h`      | List all Docker volume commands |
+| `ls`      | List current volumes            |
+| `create`  | Create a volume                 |
+| `rm`      | Delete a volume                 |
+| `inspect` | Get detailed about a volume     |
+| `prune`   | Remove all unused local volumes |
 
-### Get detailed about a volume
+## Mount volume
 
-`docker volume inspect <VOLUME_NAME>`
+https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v---read-only
 
-### Delete a volume
 
-`docker volume rm <VOLUME_NAME>`
 
-### Removing all unused volumes
+## Example
 
-`docker volume prune`
+```dockerfile
+docker volume create <VOLUME_NAME>
+docker run -v <VOLUME_NAME> <IMAGE>
+```
+
+
 
 # NETWROK
 
