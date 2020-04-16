@@ -218,8 +218,6 @@ https://docs.docker.com/engine/reference/commandline/run/#add-bind-mounts-or-vol
 docker container run --mount type=bind,source=<SOURCE>,target=<TARGET> <IMAGE>
 ```
 
-
-
 ## Example
 
 ```dockerfile
@@ -231,27 +229,35 @@ docker run -v <VOLUME_NAME> <IMAGE>
 
 # NETWROK
 
-`docker network COMMAND`
+https://docs.docker.com/network/
+
+## docker network
+
+Manage networks
 
 [https://docs.docker.com/engine/reference/commandline/network/](https://docs.docker.com/engine/reference/commandline/network/)
 
-### List networks
+`docker network COMMAND`
 
-`docker network ls`
+| Command                                                      | Description                                          |
+| ------------------------------------------------------------ | ---------------------------------------------------- |
+| [docker network connect](https://docs.docker.com/engine/reference/commandline/network_connect/) | Connect a container to a network                     |
+| [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/) | Create a network                                     |
+| [docker network disconnect](https://docs.docker.com/engine/reference/commandline/network_disconnect/) | Disconnect a container from a network                |
+| [docker network inspect](https://docs.docker.com/engine/reference/commandline/network_inspect/) | Display detailed information on one or more networks |
+| [docker network ls](https://docs.docker.com/engine/reference/commandline/network_ls/) | List networks                                        |
+| [docker network prune](https://docs.docker.com/engine/reference/commandline/network_prune/) | Remove all unused networks                           |
+| [docker network rm](https://docs.docker.com/engine/reference/commandline/network_rm/) | Remove one or more networks                          |
 
-### Inspect a network
+## Example
 
-`docker network inspect <NETWORK>`
-
-### Disconnect a runninng container from an existing network
-
-`docker network disconnect <NETWORK-CONTAINER>`
-
-### Deleta a network
-
-`docker network rm <NETWORK>`
-
-
+```dockerfile
+docker network create <NETWORK>
+docker network ls
+docker run --network <NETWORK> <IMAGE>
+docker network inspect <NETWORK>
+docker rm <NETWORK>
+```
 
 # TAG
 
