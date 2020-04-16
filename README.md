@@ -1,5 +1,6 @@
 [Security Section](_security/README.md)
 
+[Wiki - old one](https://github.com/andrzejsydor/docker/wiki)
 
 # Creating Containers:
 
@@ -11,26 +12,63 @@
 
 [https://docs.docker.com/engine/reference/commandline/container_run/](https://docs.docker.com/engine/reference/commandline/container_run/)
 
-| cmd                |                                                    |
-| ------------------ | -------------------------------------------------- |
-| `--help`           |                                                    |
-| `--rm`             | Automatically remove the container when it exits   |
-| --detach , -d      | Run container in background and print container ID |
-| --interactive , -i | Keep STDIN open even if not attached               |
-| --tty , -t         | Allocate a pseudo-TTY                              |
-| --publish , -p     | Publish a container’s port(s) to the host          |
-| --publish-all , -P | Publish all exposed ports to random ports          |
-| --volume , -v      | Bind mount a volume                                |
-| `--name`           | Assign a name to the container                     |
-| `--mount`          | Attach a filesystem mount to the container         |
-| `--network`        | Connect a container to a network                   |
-| `--restart`        | Restart policy to apply when a container exits     |
+| cmd                  |                                                    |
+| -------------------- | -------------------------------------------------- |
+| `--help`             |                                                    |
+| `--rm`               | Automatically remove the container when it exits   |
+| `--detach` , -d      | Run container in background and print container ID |
+| `--interactive` , -i | Keep STDIN open even if not attached               |
+| `--tty` , -t         | Allocate a pseudo-TTY                              |
+| `--publish` , -p     | Publish a container’s port(s) to the host          |
+| `--publish-all` , -P | Publish all exposed ports to random ports          |
+| `--volume` , -v      | Bind mount a volume                                |
+| `--name`             | Assign a name to the container                     |
+| `--mount`            | Attach a filesystem mount to the container         |
+| `--network`          | Connect a container to a network                   |
+| `--restart`          | Restart policy to apply when a container exits     |
 
 Example:
 
 `docker container run --rm -dit -name myCont alpine`
 
 
+
+# Container Commands
+
+## docker container
+
+Manage containers
+
+```none
+docker container COMMAND
+```
+
+https://docs.docker.com/engine/reference/commandline/container/
+
+| cmd       |                                              |
+| --------- | -------------------------------------------- |
+| `ls`      | List containers                              |
+| `inspect` | Display detailed information                 |
+| `top`     | display the running processes of a container |
+| `restart` | restart one or more containers               |
+
+Example:
+
+`docker ls -a`
+
+## docker attach
+
+Attach local standard input, output, and error streams to a running container
+
+```none
+docker attach [OPTIONS] CONTAINER
+```
+
+https://docs.docker.com/engine/reference/commandline/attach/
+
+Example:
+
+`docker attach <CONTAINER>`
 
 ## Run a command in a running container:
 
@@ -42,7 +80,49 @@ Example:
 
 `docker exec -it <CONTAINER> sh`
 
+`docker exec -it <CONTAINER> sh -c ls`
 
+# Images:
+
+## docker images
+
+List images
+
+```none
+docker images [OPTIONS] [REPOSITORY[:TAG]]
+```
+
+https://docs.docker.com/engine/reference/commandline/images/
+
+
+
+Example:
+
+`docker images --all`
+
+`docker images --filter=reference='*bash*'`
+
+## docker image
+
+Manage images
+
+```none
+docker image COMMAND
+```
+
+https://docs.docker.com/engine/reference/commandline/image/
+
+| cmd       |      |
+| --------- | ---- |
+| `ls`      |      |
+| `pull`    |      |
+| `push`    |      |
+| `inspect` |      |
+| `import`  |      |
+
+Example:
+
+`docker image inspect alpine`
 
 # Logs:
 
