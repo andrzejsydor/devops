@@ -249,6 +249,12 @@ Manage networks
 | [docker network prune](https://docs.docker.com/engine/reference/commandline/network_prune/) | Remove all unused networks                           |
 | [docker network rm](https://docs.docker.com/engine/reference/commandline/network_rm/) | Remove one or more networks                          |
 
+## Connect a container to a network
+
+https://docs.docker.com/engine/reference/commandline/run/#connect-a-container-to-a-network---network
+
+When you start a container use the `--network` flag to connect it to a network.
+
 ## Example
 
 ```dockerfile
