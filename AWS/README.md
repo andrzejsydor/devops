@@ -54,6 +54,32 @@ curl 127.0.0.1
 ```
 
 
+# AWS Elastic Beanstalk
+
+[https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-for-docker/](https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-for-docker/)
+
+
+
+## Deploying Elastic Beanstalk applications from Docker containers
+
+[https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html)
+
+
+
+## Single Container Docker environments
+
+[https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker.html](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker.html)
+
+[https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker-configuration.html](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker-configuration.html)
+
+Go to Elastic Beanstalk
+
+Create a new environment (Docker)
+
+Upload new version based on file [Dockerrun.aws.json](./Dockerrun.aws.json)
+
+
+
 
 # Links
 
