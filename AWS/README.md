@@ -76,7 +76,7 @@ Go to Elastic Beanstalk
 
 Create a new environment (Docker)
 
-Upload new version based on file [Dockerrun.aws.json](./Dockerrun.aws.json)
+Upload new version based on file [Dockerrun.aws.json](./basic/Dockerrun.aws.json)
 
 
 
