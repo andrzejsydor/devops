@@ -207,6 +207,7 @@ https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v---read
 
 ```dockerfile
 docker container run -v <SOURCE>:<TARGET> <IMAGE>
+docker run --rm -v $(pwd)/a.txt:/home/a.txt alpine sh -c 'ls /home'
 ```
 
 
