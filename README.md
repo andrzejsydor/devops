@@ -332,7 +332,51 @@ docker image build -t : - < tar.gz
 `docker image tag <SOURCE_IMAGE>:<TAG> <TARGET_IMAGE>:<TAG>`
 
 
+# Dockerfile
 
+
+
+## ENV
+
+The `ENV` instruction sets the environment variable `` to the value ``. This value will be in the environment for all subsequent instructions in the build stage and can be [replaced inline](https://docs.docker.com/engine/reference/builder/#environment-replacement) in many as well.
+
+```
+ENV <key> <value>
+ENV <key>=<value> ...
+```
+
+https://docs.docker.com/engine/reference/builder/#env
+
+
+
+### Example
+
+```
+ENV myName John Doe
+ENV myDog Rex The Dog
+ENV myCat fluffy
+```
+
+
+
+## ARG
+
+The `ARG` instruction defines a variable that users can pass at build-time to the builder with the `docker build` command using the `--build-arg =` flag
+
+```
+ARG <name>[=<default value>]
+```
+
+https://docs.docker.com/engine/reference/builder/#arg
+
+### Example
+
+```
+FROM busybox
+USER ${user:-some_user}
+ARG user
+USER $user
+```
 
 
 # Network
