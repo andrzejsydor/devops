@@ -279,25 +279,41 @@ Example:
 
 ### Building an image:
 
-`docker image build -t <NAME>:<TAG>`
+```
+docker image build [OPTIONS] PATH | URL | -
+```
+
+https://docs.docker.com/engine/reference/commandline/image_build/
 
 ### Useful flags:
 
-##### -f, --file string: name of the Dockerfile
 
-##### --force-rm: always remove intermediate containers
 
-##### --label: sets metadata for an image
+| cmd           |        |                                                         |
+| ------------- | ------ | ------------------------------------------------------- |
+| `--tag , -t`  |        | Name and optionally a tag in the ‘name:tag’ format      |
+| `--file , -f` |        | Name of the Dockerfile (Default is ‘PATH/Dockerfile’)   |
+| `--label`     |        | Set metadata for an image                               |
+| `--rm`        | `true` | Remove intermediate containers after a successful build |
+| `--force-rm`  |        | Always remove intermediate containers                   |
+| `--ulimit`    |        | Ulimit options                                          |
 
-##### --rm: removes intermediate containers after a successful build
+##### 
 
-##### --ulimit: ulimit options
+## Example
+
+```
+docker image build -t <NAME>:<TAG> .
+docker image build -t <NAME>:<TAG> -f Dockerfile .
+```
+
+
 
 ### Building an image from a zip file:
 
-`docker image build -t <NAME>:<TAG> - < <FILE>tar.gz`
-
-
+```
+docker image build -t : - < tar.gz
+```
 
 # Tagging
 
