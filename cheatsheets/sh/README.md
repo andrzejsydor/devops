@@ -22,8 +22,9 @@
 
 ### Process Management
 
-| [ps](http://unixhelp.ed.ac.uk/CGI/man-cgi?ps)                | Show snapshot of processes                     |
+| cmd                |                      |
 | ------------------------------------------------------------ | ---------------------------------------------- |
+| [ps](http://unixhelp.ed.ac.uk/CGI/man-cgi?ps)                | Show snapshot of processes                     |
 | [top](http://unixhelp.ed.ac.uk/CGI/man-cgi?top)              | Show real time processes                       |
 | [kill *pid*](http://unixhelp.ed.ac.uk/CGI/man-cgi?kill)      | Kill process with id *pid*                     |
 | [pkill *name*](http://unixhelp.ed.ac.uk/CGI/man-cgi?pkill)   | Kill process with name *name*                  |
