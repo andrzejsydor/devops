@@ -45,6 +45,7 @@ jobs:
           # Use Docker `latest` tag convention
           [ "$VERSION" == "master" ] && VERSION=latest
 
+          IMAGE_NAME=dockerworkshopsydor/curl
           echo IMAGE_NAME=dockerworkshopsydor/curl
           VERSION=$(date +%s)
           echo $VERSION
@@ -68,6 +69,7 @@ jobs:
           # Use Docker `latest` tag convention
           [ "$VERSION" == "master" ] && VERSION=latest
 
+          IMAGE_NAME=dockerworkshopsydor/git
           echo IMAGE_NAME=dockerworkshopsydor/git
           VERSION=$(date +%s)
           echo $VERSION
