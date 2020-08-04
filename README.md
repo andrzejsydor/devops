@@ -70,6 +70,8 @@ Example:
 
 `docker ls -a`
 
+`docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.Status}}'`
+
 ## docker attach
 
 Attach local standard input, output, and error streams to a running container
@@ -487,6 +489,8 @@ docker system COMMAND
 
 `docker system df -v`
 
+`docker system df --format 'table {{.Type}}\t{{.TotalCount}}\t{{.Size}}'`
+
 ### Remove dangling images (images not referenced by any tag or container)
 
 `docker image prune`
@@ -494,6 +498,10 @@ docker system COMMAND
 ### Remove all unused images (not useb by a container)
 
 `docker image prune -a`
+
+### Removing Images by Size
+
+`docker image ls | sort -k7 -h -r`
 
 # Portainer
 
