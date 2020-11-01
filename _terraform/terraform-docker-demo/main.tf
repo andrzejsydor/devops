@@ -12,3 +12,12 @@ resource "docker_container" "nginx" {
   }
 }
  
+# fix after upgrade to Terraform 0.13
+terraform {
+  required_providers {
+    docker = {
+      source = "terraform-providers/docker"
+    }
+  }
+  required_version = ">= 0.13"
+}
