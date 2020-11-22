@@ -1,12 +1,25 @@
+# PostgreSQL
 
-https://hub.docker.com/_/postgres/
+```
+https://hub.docker.com/_/postgres
+```
 
-https://store.docker.com/images/postgres
+## Build container
 
-docker run -p 5432:5432 --name some-postgres -e POSTGRES_DB=mydb -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+```
+docker build -t airflow-postgres .
+```
 
-Shell Access
+## Run PostgreSQL container
+
+```
+docker run --name airflow-postgres -p 5432:5432 -e POSTGRES_PASSWORD=password -d airflow-postgres
+```
+
+## Shell Access
+```
 docker exec -it some-postgres bash
+
 
 psql -U postgres;
 
@@ -23,3 +36,4 @@ CREATE TABLE mytable(
    NAME           TEXT    NOT NULL
 );
 
+```
