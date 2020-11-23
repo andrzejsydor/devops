@@ -12,7 +12,7 @@
 | [find */dir/* -name *name**](http://unixhelp.ed.ac.uk/CGI/man-cgi?find) | Find files starting with *name* in *dir*                     |
 | [locate *file*](http://unixhelp.ed.ac.uk/CGI/man-cgi?locate) | Find *file* (quick search of system index)                   |
 | [watch -n 5 'ntpq -p'](http://unixhelp.ed.ac.uk/CGI/man-cgi?watch) | Issue the 'ntpq -p' command every 5 seconds and display output |
-
+| atch -n 2 cat /var/log/cron.log | Watch command every 2 seconds |
 
 
 
