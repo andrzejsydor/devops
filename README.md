@@ -2,6 +2,8 @@
 
 [Commands](commands/README.md)
 
+[healthcheck](https://docs.docker.com/engine/reference/builder/#healthcheck)
+
 [Wiki - old one](https://github.com/andrzejsydor/docker/wiki)
 
 # Creating Containers:
