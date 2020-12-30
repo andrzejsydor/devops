@@ -1,3 +1,5 @@
+# Links
+
 [Security Section](_security/README.md)
 
 [Commands](commands/README.md)
@@ -5,6 +7,13 @@
 [healthcheck](https://docs.docker.com/engine/reference/builder/#healthcheck)
 
 [Wiki - old one](https://github.com/andrzejsydor/docker/wiki)
+
+# Git
+
+## Personal access tokens
+
+`git remote set-url origin https://andrzejsydor:<TOKEN>>@github.com/andrzejsydor/devops.git`
+
 
 # Creating Containers:
 
