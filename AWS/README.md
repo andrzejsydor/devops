@@ -80,6 +80,16 @@ Upload new version based on file [Dockerrun.aws.json](./basic/Dockerrun.aws.json
 
 
 
+# Maven
+
+[https://docs.aws.amazon.com/neptune/latest/userguide/iam-auth-connect-prerq.html](https://docs.aws.amazon.com/neptune/latest/userguide/iam-auth-connect-prerq.html)
+
+```sh
+#!/bin/bash
+sudo wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
+```
 
 # Links
 
