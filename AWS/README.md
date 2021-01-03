@@ -1,3 +1,7 @@
+# AWS repo
+
+[https://github.com/andrzejsydor/aws/](https://github.com/andrzejsydor/aws/)
+
 [https://aws.amazon.com/docker/](https://aws.amazon.com/docker/)
 
 [Deploy Docker Containers on Amazon Elastic Container Service Amazon ECS](https://aws.amazon.com/getting-started/hands-on/deploy-docker-containers/)
@@ -77,21 +81,4 @@ Go to Elastic Beanstalk
 Create a new environment (Docker)
 
 Upload new version based on file [Dockerrun.aws.json](./basic/Dockerrun.aws.json)
-
-
-
-# Maven
-
-[https://docs.aws.amazon.com/neptune/latest/userguide/iam-auth-connect-prerq.html](https://docs.aws.amazon.com/neptune/latest/userguide/iam-auth-connect-prerq.html)
-
-```sh
-#!/bin/bash
-sudo wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
-sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
-sudo yum install -y apache-maven
-```
-
-# Links
-
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html
 
