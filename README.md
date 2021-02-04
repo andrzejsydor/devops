@@ -129,6 +129,8 @@ Example:
 
 `docker images --filter=reference='*bash*'`
 
+`docker images image*`
+
 ## docker image
 
 Manage images
@@ -139,13 +141,13 @@ docker image COMMAND
 
 https://docs.docker.com/engine/reference/commandline/image/
 
-| cmd       |      |
-| --------- | ---- |
-| `ls`      |      |
-| `pull`    |      |
-| `push`    |      |
-| `inspect` |      |
-| `import`  |      |
+| cmd       |
+| --------- |
+| `ls`      |
+| `pull`    |
+| `push`    |
+| `inspect` |
+| `import`  |
 
 Example:
 
