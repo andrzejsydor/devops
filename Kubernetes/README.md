@@ -15,3 +15,7 @@ kubectl exec -it $(kubectl get pods -l app=webserver -o name) -- bash
 kubectl top pod POD_NAME --containers --sort-by=cpu
 `
 
+## Show all storage classes
+`
+kubectl get storageclass --all-namespaces
+`
