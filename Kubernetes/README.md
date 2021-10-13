@@ -19,3 +19,9 @@ kubectl top pod POD_NAME --containers --sort-by=cpu
 `
 kubectl get storageclass --all-namespaces
 `
+
+## Scale up/down
+```
+kubectl scale deployment/<name> -n <namespace> --replicas=0
+kubectl scale deployment/<name> -n <namespace> --replicas=1
+```
