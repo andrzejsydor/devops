@@ -9,10 +9,11 @@
 | [ls](http://unixhelp.ed.ac.uk/CGI/man-cgi?ls)                | List files                                                   |
 | [man *command*](http://unixhelp.ed.ac.uk/CGI/man-cgi?man)    | Show manual for *command*                                    |
 | env                                                          | Show enviro­nment variables                                  |
-| [find */dir/* -name *name**](http://unixhelp.ed.ac.uk/CGI/man-cgi?find) | Find files starting with *name* in *dir*                     |
+| [find */dir/* -name *name**](http://unixhelp.ed.ac.uk/CGI/man-cgi?find) | Find files starting with *name* in *dir*          |
+| find / -type f -iname <file>.ext                             | Find file ignored case [link](https://www.plesk.com/blog/various/find-files-in-linux-via-command-line/)                                      |
 | [locate *file*](http://unixhelp.ed.ac.uk/CGI/man-cgi?locate) | Find *file* (quick search of system index)                   |
 | [watch -n 5 'ntpq -p'](http://unixhelp.ed.ac.uk/CGI/man-cgi?watch) | Issue the 'ntpq -p' command every 5 seconds and display output |
-| atch -n 2 cat /var/log/cron.log | Watch command every 2 seconds |
+| watch -n 2 cat /var/log/cron.log | Watch command every 2 seconds |
 | [xargs](https://en.wikipedia.org/wiki/Xargs)                 |  |
 
 
