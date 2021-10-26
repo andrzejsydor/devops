@@ -10,6 +10,13 @@
 kubectl exec -it $(kubectl get pods -l app=webserver -o name) -- bash
 `
 
+## run command on container
+
+```
+kubectl exec $(kubectl get pod -l app=webserver -n <ns> -o name) -c <container> -- ls /home
+kubectl exec $(kubectl get pod -l app=webserver -n <ns> -o jsonpath="{.items[0].metadata.name}") -c <container> -- ls /home
+```
+
 ## Show metrics for a given pod and its containers sorted by cpu|memory
 `
 kubectl top pod POD_NAME --containers --sort-by=cpu
