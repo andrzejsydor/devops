@@ -27,6 +27,12 @@ kubectl top pod POD_NAME --containers --sort-by=cpu
 kubectl get storageclass --all-namespaces
 `
 
+### [List all services in the namespace](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#viewing-finding-resources)
+```
+kubectl get svc
+kubectl get svc -n <namespace>
+```
+
 ## Scale up/down
 ```
 kubectl scale deployment/<name> -n <namespace> --replicas=0
